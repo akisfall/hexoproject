@@ -19,23 +19,38 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"akisfall.github.io","root":"/hexoproject/","images":"/hexoproject/images","scheme":"Mist","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/hexoproject/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="STEM教學網">
-<meta property="og:url" content="https://akisfall.github.io/hexoproject/index.html">
+    <meta name="description" content="虛擬環境整理好你的開發環境 虛擬環境，Python內建的一個技術（於3.9版中內建）。 虛擬環境最主要是將每個專案需要的環境分開來，能夠將各個環境明確的分開，也不必占用全域環境（只裝在C槽的Python）的記憶體空間。 另外，也有可能當初開發的程式會需要某個套件（套件，將別人寫的程式碼庫直接來套用）的1.0版，也可能現在開發的程式會需要2.0版，但因為1.0版與2.0版的套件不可能一起存在， 所以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VirtualEnv">
+<meta property="og:url" content="https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/index.html">
 <meta property="og:site_name" content="STEM教學網">
+<meta property="og:description" content="虛擬環境整理好你的開發環境 虛擬環境，Python內建的一個技術（於3.9版中內建）。 虛擬環境最主要是將每個專案需要的環境分開來，能夠將各個環境明確的分開，也不必占用全域環境（只裝在C槽的Python）的記憶體空間。 另外，也有可能當初開發的程式會需要某個套件（套件，將別人寫的程式碼庫直接來套用）的1.0版，也可能現在開發的程式會需要2.0版，但因為1.0版與2.0版的套件不可能一起存在， 所以">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/imgs/VirtualEnv/cmdsearch.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/imgs/VirtualEnv/cmd.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/imgs/VirtualEnv/createVirtualEnv.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/imgs/VirtualEnv/OpenVirtualEnv.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/imgs/VirtualEnv/pipinstallGlobal.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/imgs/VirtualEnv/pipinstallVirtualEnv.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/imgs/VirtualEnv/piplist.jpg">
+<meta property="article:published_time" content="2024-04-02T14:24:32.000Z">
+<meta property="article:modified_time" content="2024-04-02T14:47:16.703Z">
 <meta property="article:author" content="第21組">
+<meta property="article:tag" content="Setup">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="VirtualEnv">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/imgs/VirtualEnv/cmdsearch.jpg">
 
 
-<link rel="canonical" href="https://akisfall.github.io/hexoproject/">
+<link rel="canonical" href="https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-TW","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/","path":"2024/04/02/VirtualEnv/","title":"VirtualEnv"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>STEM教學網</title>
+<title>VirtualEnv | STEM教學網</title>
   
 
 
@@ -68,7 +83,7 @@
 
     <a href="/hexoproject/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">STEM教學網</h1>
+      <p class="site-title">STEM教學網</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -94,7 +109,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目錄
@@ -107,6 +122,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">虛擬環境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">建立虛擬環境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%93%E9%96%8B%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83"><span class="nav-number">3.</span> <span class="nav-text">打開虛擬環境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PIP"><span class="nav-number">4.</span> <span class="nav-text">PIP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Requirements-txt"><span class="nav-number">5.</span> <span class="nav-text">Requirements.txt</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -151,92 +167,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://akisfall.github.io/hexoproject/2024/04/02/Introduction/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/hexoproject/images/avatar.gif">
-      <meta itemprop="name" content="第21組">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="STEM教學網">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | STEM教學網">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-              <span class="post-sticky-flag" title="置頂">
-                <i class="fa fa-thumbtack"></i>
-              </span><a href="/hexoproject/2024/04/02/Introduction/" class="post-title-link" itemprop="url">網站介紹</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2024-04-02 20:24:32 / 修改時間：22:24:25" itemprop="dateCreated datePublished" datetime="2024-04-02T20:24:32+08:00">2024-04-02</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h1><p>大家好，我們是製作此網頁的大學生們。<br>在這個網站中我們建置這個部落客是為了達到學習Python的目的（當然也不免於讓團隊們複習程式設計</p>
-<p>在這個網站中，最終目標並不是要求你刷一大堆<a target="_blank" rel="noopener" href="https://leetcode.com/">LeetCode</a>及<a target="_blank" rel="noopener" href="https://www.codewars.com/dashboard">CodeWars</a>。<br>雖然這些很重要，但寫程式的最終目的並不是變成一個解題目機器，寫程式是為了解決問題與創新。<br>從一個小小的想法擴大到一個又一個的專案，這才是寫程式的目的。<br>希望有緣造訪這個網站的大家們，無論是否能夠在心中燃起學程式的熱情抑或者在心中能夠助燃你的熱情使它燒的更旺更高。<br>我們都由衷地感謝你前來看這個網站。<br>且希望大家能夠勇於發言與偵錯，改進我們的網站</p>
-<p>這個網站的最終目的如上段所說，我們希望能夠用簡易又輕鬆的方式來學習Python並達到撰寫實用程式的實例。<br>以上，介紹完畢<br><strong><span style="color:rgb(175,0,0)">非常建議來訪的大家請善用上方的分類，比較不會混亂喔！</span></strong></p>
-<h1 id="特別感謝"><a href="#特別感謝" class="headerlink" title="特別感謝"></a>特別感謝</h1><p>本網站主要使用開源部落格<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo https://hexo.io/</a><br>以及Hexo底下的Next主題進行開發<a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next">Next https://github.com/next-theme/hexo-theme-next</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://akisfall.github.io/hexoproject/2024/04/02/VirtualEnv/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -250,13 +191,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | STEM教學網">
+      <meta itemprop="name" content="VirtualEnv | STEM教學網">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/hexoproject/2024/04/02/VirtualEnv/" class="post-title-link" itemprop="url">VirtualEnv</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          VirtualEnv
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -288,8 +229,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="虛擬環境"><a href="#虛擬環境" class="headerlink" title="虛擬環境"></a>虛擬環境</h1><p><small>整理好你的開發環境</small></p>
+    <div class="post-body" itemprop="articleBody"><h1 id="虛擬環境"><a href="#虛擬環境" class="headerlink" title="虛擬環境"></a>虛擬環境</h1><p><small>整理好你的開發環境</small></p>
 <p><strong>虛擬環境</strong>，Python內建的一個技術（於3.9版中內建）。 虛擬環境最主要是將每個專案需要的環境分開來，能夠將各個環境明確的分開，也不必占用全域環境（只裝在C槽的Python）的記憶體空間。 另外，也有可能當初開發的程式會需要某個套件（<strong>套件</strong>，將別人寫的程式碼庫直接來套用）的1.0版，也可能現在開發的程式會需要2.0版，但因為1.0版與2.0版的套件不可能一起存在， 所以虛擬環境便能夠解決這種尷尬的情況。 </p>
 <blockquote>
 <p>Python 應用程式通常會用到不在標準函式庫的套件和模組。應用程式有時候會需要某個特定版本的函式庫，因為這個應用程式可能需要某個特殊的臭蟲修正，或是這個應用程式是根據該函式庫特定版本的介面所撰寫。 這意味著不太可能安裝一套 Python 就可以滿足所有應用程式的要求。如果應用程式 A 需要一個特定的模組的 1.0 版，但另外一個應用程式 B 需要 2.0 版，那麼這整個需求不管安裝 1.0 或是 2.0 都會衝突，以致於應用程式無法使用。—節錄自 <em><a target="_blank" rel="noopener" href="https://docs.python.org/zh-tw/3/tutorial/venv.html">虛擬環境簡介</a></em></p>
@@ -311,7 +251,6 @@ pip freeze > requirements.txt<br>
 
 <p>最後，附上一下pip的 <a target="_blank" rel="noopener" href="https://pip.pypa.io/en/stable/installation/">官方文件</a></p>
 
-      
     </div>
 
     
@@ -319,94 +258,27 @@ pip freeze > requirements.txt<br>
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/hexoproject/tags/Setup/" rel="tag"># Setup</a>
+              <a href="/hexoproject/tags/Python/" rel="tag"># Python</a>
+              <a href="/hexoproject/tags/VirtualEnv/" rel="tag"># VirtualEnv</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/hexoproject/2024/04/02/CodeEditor/" rel="prev" title="CodeEditor">
+                  <i class="fa fa-angle-left"></i> CodeEditor
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://akisfall.github.io/hexoproject/2024/04/02/CodeEditor/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/hexoproject/images/avatar.gif">
-      <meta itemprop="name" content="第21組">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="STEM教學網">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | STEM教學網">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/hexoproject/2024/04/02/CodeEditor/" class="post-title-link" itemprop="url">CodeEditor</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2024-04-02 20:38:30 / 修改時間：22:27:32" itemprop="dateCreated datePublished" datetime="2024-04-02T20:38:30+08:00">2024-04-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/hexoproject/categories/%E5%BB%BA%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">建置</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="原始碼編輯器介紹"><a href="#原始碼編輯器介紹" class="headerlink" title="原始碼編輯器介紹"></a>原始碼編輯器介紹</h1><p><strong>原始碼編輯器</strong>（程式碼編輯器）是一種工具，提供工程師們在撰寫程式時能夠有增加效率的功能， 你可以從軟體上面看到五顏六色的各種語法標記（Syntax Highlighting）與其他常用的功能 例如：剪下複製貼上、快速縮排、重構程式碼等等，都必須要透過原始碼編輯器才可能做到。 這個世界上有很多不同的原始碼編輯器，在眾多的原始碼編輯器中，只需要一個挑選的原則。<br><span style="color:rgb(175,0,0)">自己喜歡或者習慣的就好！</span><br>基本上不必太糾結於其他人常用的編輯器，只要在乎自己習慣或喜歡的編輯器就好了。 接下來，我們會介紹幾個常見的編輯器。</p>
-<h1 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a></h1><p>Visual Studio Code又稱為VScode，是由微軟開發，是一開放原始碼與免費的原始碼編輯器。 由於有著很簡潔又簡單的介面，與此同時也有很複雜的設定，使得其成為很有彈性的原始碼編輯器 變成新手好入門，而老手可以依照自己的需求去設定自己想要的介面，便躍升成為在軟體開發者間最常使用的編輯器。 除了彈性的設定外，還有著能夠支援大部分程式語言的語法標記的強大功能，以及社群對於其撰寫的附加元件（extension）都是Vscode的主力喔！<br><img src="/hexoproject/2024/04/02/CodeEditor/imgs/CodeEditors/vscode.jpg" alt="vscodeWelcome"><br>以下是 <a target="_blank" rel="noopener" href="https://survey.stackoverflow.co/2023/#section-most-popular-technologies-integrated-development-environment">StackOverFlow</a>（非常知名的程式論壇網站，只要一找關於程式的問題，一定知道它的存在。）所製作的2023年年度調查。<br><img src="/hexoproject/2024/04/02/CodeEditor/imgs/CodeEditors/SOFIDEsurvey.png" alt="SOFIDEsurvey"></p>
-<h1 id="Pycharm"><a href="#Pycharm" class="headerlink" title="Pycharm"></a><a target="_blank" rel="noopener" href="https://www.jetbrains.com/pycharm/">Pycharm</a></h1><p>PyCharm作為JetBrains為了Python社群所開發的原始碼編輯器，其實介面設計與 <a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/?var=1">InetlliJ</a> （一個撰寫Java的原始碼編輯器）非常相似。 PyCharm有個很好的優點，除了他與Intellij有著一樣的介面，同時他也非常嘮叨。對於程式碼格式上的要求非常<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=3TrANr9lgEA&t=1s">嚴格</a> 。 除了對程式碼格式嚴格謹慎外，Pycharm還有個auto refactor（自動重構，俗稱一鍵排版）的功能。 但有著一個缺點，非常吃電腦資源，根據一篇<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/75668255/how-to-reduce-pycharm-memory-usage">SOF的問題所述</a>PyCharm可以一次就吃到1.5G的RAM，造成可能沒辦法一次開太多實況掛台，跟聽YT音樂的情形。（假設你的電腦比較差點）</p>
-<h1 id="Spyder-Jupyter"><a href="#Spyder-Jupyter" class="headerlink" title="Spyder&#x2F;Jupyter"></a><a target="_blank" rel="noopener" href="https://www.anaconda.com/download/">Spyder&#x2F;Jupyter</a></h1><p>Spyder大概是在學校裡面最常見的原始碼編輯器了，最主要的原因是Spyder能夠內建了許多的第三方套件（簡稱為套件，意旨由其他人所撰寫的程式碼） 除了能夠省略需要使用pip安裝的過程（後面會提），也是帶新手入門Modules的好選擇。<br><img src="/hexoproject/2024/04/02/CodeEditor/imgs/CodeEditors/spyder.jpg" alt="spyder"><br>另外Jupyter跟Spyder都是屬於Anaconda旗下的原始碼編輯器，Jupyter特別的地方是網路編輯器。 也就是說，所有程式的撰寫與執行都是在網頁上一並執行喔！ 而且他可以建立很多個筆記，等於是將很多不同的程式碼放在一起，然後想要測試哪個區段就可以到哪邊測試喔！ 註：學過AI的朋友們，應該也知道Google Colab也是同樣的介面喔！<br><img src="/hexoproject/2024/04/02/CodeEditor/imgs/CodeEditors/Jupyter.jpg" alt="Jupyter"></p>
-<h1 id="NeoVim"><a href="#NeoVim" class="headerlink" title="NeoVim"></a><a target="_blank" rel="noopener" href="https://neovim.io/">NeoVim</a></h1><p>最後的最後，我想要來介紹這個特殊的原始碼編輯器。NeoVim。<br>這個編輯器有個特別的地方，他需要你全程「打字！」，你必須要透過背起許多指令以及各個按鍵的功能，才能夠使其有「程式碼編輯器」的功能！ 太多了嗎？還有呢，因為它內建的功能不足以成為一個合格的編輯器，所以你要透過安裝其他人編寫的插件才能夠讓他成為合格的程式碼編輯器。<br>好的，那…它為甚麼會出現在這個世上呢？既然那麼難用的話？<br>因為它很<strong>輕量簡潔、有彈性以及最重要的你不必動用你的滑鼠！</strong> 由於寫程式的過程大部分都在透過鍵盤打字，然而，你去動用你的滑鼠會需要伸過去的時間、滑動的時間以及點擊的時間。 NeoVim或者Vim（NeoVim的爸爸）就是完全解決這個問題，它們只要用鍵盤就能做到跟Vscode一樣的功能！根據一篇 <a target="_blank" rel="noopener" href="https://kaustubhpatange.medium.com/how-neovim-helped-improve-my-productivity-4214dd099340">Medium的文章所述</a> ，Neovim成功地減少了許多開發的時間，因為減少了動用滑鼠的時間。<br><img src="/hexoproject/2024/04/02/CodeEditor/imgs/CodeEditors/Nvim.jpg" alt="NeoVim"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 

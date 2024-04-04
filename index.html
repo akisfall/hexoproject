@@ -119,18 +119,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/hexoproject/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/hexoproject/categories/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/hexoproject/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -255,6 +255,195 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akisfall.github.io/hexoproject/2024/04/04/integer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/hexoproject/images/avatar.gif">
+      <meta itemprop="name" content="第21組">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="STEM教學網">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | STEM教學網">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/hexoproject/2024/04/04/integer/" class="post-title-link" itemprop="url">整數與運算子</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2024-04-04 11:49:39 / 修改時間：13:04:57" itemprop="dateCreated datePublished" datetime="2024-04-04T11:49:39+08:00">2024-04-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/hexoproject/categories/%E8%B3%87%E6%96%99%E5%9E%8B%E6%85%8B/" itemprop="url" rel="index"><span itemprop="name">資料型態</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="整數"><a href="#整數" class="headerlink" title="整數"></a>整數</h1><p>整數就是在數學中，沒有小數點的數字。整數在程式設計裡面，整數的數字可以儲存從<strong>2147438647 ~ -2147483647</strong>，整數其實面對一些社會上沒那麼大型的專案來說，整數已經是屬於非常夠用的資料型態。想當然，如微軟、Google等大型企業來說這資料量幾乎可以說只能塞牙縫。</p>
+<p>但Python跟大家就愛不一樣，Python的整數是幾乎沒有限制的，它不必理會2147438647的限制，主要的原因是它把另一個資料型態<code>long</code>合併起來並成為了看似沒有盡頭的<code>int</code>型態。（感謝這篇<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/46699469/why-integers-do-not-have-size-limit-in-python-3">SOF</a>的解釋）。</p>
+<h1 id="運算子"><a href="#運算子" class="headerlink" title="運算子"></a>運算子</h1><p>程式語言的世界中，運算子成了不可或缺的存在。<br>運算子在數學中叫做加減乘除，只不過在程式中，它把加減乘除擴展到了很多種運算子</p>
+<h2 id="（加減乘除）"><a href="#（加減乘除）" class="headerlink" title="+-*&#x2F;（加減乘除）"></a>+-*&#x2F;（加減乘除）</h2><p>加減乘除在程式設計跟數學的世界中一定是大家最常接觸的運算符號了。<br>基本上加減乘除沒甚麼太稀奇的部分，硬要說的話應該是除法會比較需要注意。<br>等等會提到，我們先來看看例子</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">10</span> <span class="comment">#假設x=10</span></span><br><span class="line"><span class="built_in">print</span>(x+<span class="number">2</span>) <span class="comment">#加 output 12</span></span><br><span class="line"><span class="built_in">print</span>(x-<span class="number">2</span>) <span class="comment">#減 output 8</span></span><br><span class="line"><span class="built_in">print</span>(x*<span class="number">2</span>) <span class="comment">#乘 output 20</span></span><br><span class="line"><span class="built_in">print</span>(x/<span class="number">2</span>) <span class="comment">#除 output 5.0 注意!!不是5</span></span><br></pre></td></tr></table></figure>
+<p>可以看到在第5行的時候，我們收到的是<strong>5.0</strong>而非是<strong>5</strong>。<br>這是因為除法可以除出小數點的關係，像是<code>25/4=6.25</code>。所以呢，我們就會把除法分成取整跟取餘。</p>
+<h2 id="取整取餘"><a href="#取整取餘" class="headerlink" title="取整取餘"></a>取整取餘</h2><p>取整取餘在程式世界中，取整是指我要除出來後拿整數的部分，無條件捨去掉小數點的部分，由上面的<code>25/4=6.25</code>為例，取整的話就會是<code>6</code>。<br>在Python中想要取整，只要輸入運算子<code>//</code>就能夠做到取整了喔！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">10</span>//<span class="number">2</span>) <span class="comment">#回傳5</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(<span class="number">10</span>//<span class="number">2</span>)) <span class="comment">#&lt;class &#x27;int&#x27;&gt; 代表資料形態是int</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">10</span>/<span class="number">2</span>) <span class="comment">#回傳5.0</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(<span class="number">10</span>/<span class="number">2</span>)) <span class="comment">#&lt;class &#x27;float&#x27;&gt; 代表資料形態是float</span></span><br></pre></td></tr></table></figure>
+
+<p>取餘的概念也很簡單，就是取餘數。只要輸入運算子<code>%</code>就能夠取餘了喔！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">25</span>%<span class="number">4</span>) <span class="comment">#output: 1 (25/4=6...1)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(<span class="number">25</span>%<span class="number">4</span>)) <span class="comment">#output: &lt;class &#x27;int&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akisfall.github.io/hexoproject/2024/04/03/variable/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/hexoproject/images/avatar.gif">
+      <meta itemprop="name" content="第21組">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="STEM教學網">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | STEM教學網">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/hexoproject/2024/04/03/variable/" class="post-title-link" itemprop="url">變數</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-04-03 16:17:49" itemprop="dateCreated datePublished" datetime="2024-04-03T16:17:49+08:00">2024-04-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-04-04 11:51:31" itemprop="dateModified" datetime="2024-04-04T11:51:31+08:00">2024-04-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/hexoproject/categories/%E8%B3%87%E6%96%99%E5%9E%8B%E6%85%8B/" itemprop="url" rel="index"><span itemprop="name">資料型態</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="變數"><a href="#變數" class="headerlink" title="變數"></a>變數</h1><p>變數就像是一個有著<strong>固定形狀（資料型態）</strong>的容器，像是瓶子只能裝液體、箱子可以裝固體而鋼瓶只能裝氣體。程式設計對於變數的宣告就如同上面般嚴格，假設今天在瓶子裝固體，編譯器就會跟你說，瓶子不可以裝固體，只能裝液體。另外，為了方便辨識，我們會把這些容器<strong>貼上標籤（命名）</strong>。</p>
+<p>Python在處理這塊的時候有些特別之處，Python並不會要求開發者宣告容器的資料型態，而是Python會根據你自己輸入的<strong>值（可以想像成你放進去的東西）</strong>，來決定你的資料型態。當以後有機會想要學習其他語言時，請注意關於資料型態的宣告喔！</p>
+<h1 id="變數宣告"><a href="#變數宣告" class="headerlink" title="變數宣告"></a>變數宣告</h1><p>無論如何，我們先來看看變數宣告的語法吧！<br><code>x = 1</code><br>以上就將變數宣告完成了，是不是很簡單呢？<br>那我們今天的教學就到這裡了…嗎？<br>當然不是，我們還是別水一篇文章。</p>
+<h2 id="指派"><a href="#指派" class="headerlink" title="指派"></a>指派</h2><p>上面的語法是將一個<strong>命名為<code>x</code>的變數指派為（<code>=</code>）數字1</strong>。<br>指派完變數之後，使用的邏輯就像是數學的未知數般。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(x+<span class="number">1</span>) <span class="comment">#output:2</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">利用數學的邏輯來看，將x=1帶入print(x+1)</span></span><br><span class="line"><span class="string">就會得到2，所以你會在輸出看到2喔！</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="重新指派"><a href="#重新指派" class="headerlink" title="重新指派"></a>重新指派</h2><p>除了可以調用以外，我們可以重新設定值。<br>只要輸入<strong>相同的命名指派（<code>=</code>）到新的值</strong>就可以更新新的值了！<br>例如我要把上面的x改成3，只要打上<br><code>x=3</code>就可以把值改成3了！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(x) <span class="comment">#output:1</span></span><br><span class="line">x = <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(x) <span class="comment">#output:3</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h1><p>保留字是甚麼？保留字就是字面上的意思，為語言自己保留的單字。<br>像是常見的<strong>if, for, while, print</strong>等，這些都叫做保留字。<br>這些保留字在Visual Studio Code中，會用其他顏色進行標記，所以基本上不用擔心會發生誤取名的事情發生。<br>例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span> = <span class="number">20</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">print</span>) <span class="comment">#他會跟你說print不能被呼叫了，因為你用變數設定的方式把print函式取代掉了</span></span><br><span class="line"><span class="keyword">if</span> = <span class="number">20</span> <span class="comment">#直接不可使用，因為if有特定的格式</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="變數命名法"><a href="#變數命名法" class="headerlink" title="變數命名法"></a>變數命名法</h1><p>變數的命名在程式設計的世界中可以影響你在程式設計的世界中DeBug的速度，同時也能影響到未來在看你程式碼的工程師們以及未來的你。如同在閱讀書籍般，你肯定不希望讀到的書都是一堆意義不明的文字，程式設計也是一樣，你絕對不希望都是看到充滿著<code>x</code>，<code>y</code>，<code>z</code>的程式碼。更不希望看到<code>Idon&#39;tknowhowtosetthis</code>的變數名稱充斥著你的程式碼。</p>
+<p>所以在命名變數的時候，請盡可能地取出有意義的文字設定變數，秉持著<strong>函式或方法是動詞，跟名詞是變數</strong>的方向來取名。</p>
+<h2 id="底線命名法"><a href="#底線命名法" class="headerlink" title="底線命名法"></a>底線命名法</h2><p><strong>底線命名法</strong>是蠻常見的命名法，主要是在一個單字結束後加入<code>_</code>的命名法。<br>例如<br><code>shopping_cart = 10</code><br><code>exchange_rate = 10</code><br><code>milk_shake = 10</code></p>
+<h2 id="駝峰式命名法"><a href="#駝峰式命名法" class="headerlink" title="駝峰式命名法"></a>駝峰式命名法</h2><p><strong>駝峰式命名法</strong>跟底線命名法一樣常見。<br>駝峰式命名法是將最開頭的字寫成小寫，剩下的單字開頭都要大寫，如果用文字描述看不懂，可以直接看下例。<br>例如（承上例）：<br><code>shoppingCart = 10</code><br><code>exchangeRate = 10</code><br><code>milkShake = 10</code></p>
+<p>還有很多不同的命名法，當然各個命名法會有各自的使用標準。<br>但請記住，命名法的目的是要順暢的閱讀程式碼。<br>只要能順暢地閱讀程式碼，就達成這些命名法的目的了。<br>最後，如果只是單純要測試的話，可以就很習慣的用<code>x</code>,<code>y</code>,<code>z</code>以及<code>foo</code>跟<code>bar</code>都可以</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://akisfall.github.io/hexoproject/2024/04/03/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -283,9 +472,24 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2024-04-03 09:33:42 / 修改時間：10:14:41" itemprop="dateCreated datePublished" datetime="2024-04-03T09:33:42+08:00">2024-04-03</time>
+      <time title="創建時間：2024-04-03 09:33:42" itemprop="dateCreated datePublished" datetime="2024-04-03T09:33:42+08:00">2024-04-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-04-04 11:51:57" itemprop="dateModified" datetime="2024-04-04T11:51:57+08:00">2024-04-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/hexoproject/categories/%E5%BB%BA%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">建置</span></a>
+        </span>
     </span>
 
   
@@ -364,9 +568,15 @@ mkdir （你想要的名稱）
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2024-04-02 22:24:32 / 修改時間：22:50:57" itemprop="dateCreated datePublished" datetime="2024-04-02T22:24:32+08:00">2024-04-02</time>
+      <time title="創建時間：2024-04-02 22:24:32" itemprop="dateCreated datePublished" datetime="2024-04-02T22:24:32+08:00">2024-04-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-04-04 11:52:06" itemprop="dateModified" datetime="2024-04-04T11:52:06+08:00">2024-04-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -471,7 +681,7 @@ pip freeze > requirements.txt<br>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-04-03 11:07:40" itemprop="dateModified" datetime="2024-04-03T11:07:40+08:00">2024-04-03</time>
+      <time title="修改時間：2024-04-04 11:51:35" itemprop="dateModified" datetime="2024-04-04T11:51:35+08:00">2024-04-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">

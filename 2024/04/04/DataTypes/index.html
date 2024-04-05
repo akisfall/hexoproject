@@ -19,31 +19,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"akisfall.github.io","root":"/hexoproject/","images":"/hexoproject/images","scheme":"Mist","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/hexoproject/js/config.js"></script>
 
-    <meta name="description" content="整數整數就是在數學中，沒有小數點的數字。整數在程式設計裡面，整數的數字可以儲存從2147438647 ~ -2147483647，整數其實面對一些社會上沒那麼大型的專案來說，整數已經是屬於非常夠用的資料型態。想當然，如微軟、Google等大型企業來說這資料量幾乎可以說只能塞牙縫。 但Python跟大家就愛不一樣，Python的整數是幾乎沒有限制的，它不必理會2147438647的限制，主要的原因是">
-<meta property="og:type" content="article">
-<meta property="og:title" content="整數與運算子">
-<meta property="og:url" content="https://akisfall.github.io/hexoproject/2024/04/04/integer/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="基本的資料型態">
+<meta property="og:url" content="https://akisfall.github.io/hexoproject/2024/04/04/DataTypes/index.html">
 <meta property="og:site_name" content="STEM教學網">
-<meta property="og:description" content="整數整數就是在數學中，沒有小數點的數字。整數在程式設計裡面，整數的數字可以儲存從2147438647 ~ -2147483647，整數其實面對一些社會上沒那麼大型的專案來說，整數已經是屬於非常夠用的資料型態。想當然，如微軟、Google等大型企業來說這資料量幾乎可以說只能塞牙縫。 但Python跟大家就愛不一樣，Python的整數是幾乎沒有限制的，它不必理會2147438647的限制，主要的原因是">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-04-04T03:49:39.000Z">
-<meta property="article:modified_time" content="2024-04-04T05:04:57.889Z">
+<meta property="article:modified_time" content="2024-04-05T06:34:19.796Z">
 <meta property="article:author" content="第21組">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Tutorial">
 <meta property="article:tag" content="DataType">
 <meta property="article:tag" content="Integer">
+<meta property="article:tag" content="float">
+<meta property="article:tag" content="boolean">
+<meta property="article:tag" content="String">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://akisfall.github.io/hexoproject/2024/04/04/integer/">
+<link rel="canonical" href="https://akisfall.github.io/hexoproject/2024/04/04/DataTypes/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://akisfall.github.io/hexoproject/2024/04/04/integer/","path":"2024/04/04/integer/","title":"整數與運算子"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://akisfall.github.io/hexoproject/2024/04/04/DataTypes/","path":"2024/04/04/DataTypes/","title":"基本的資料型態"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>整數與運算子 | STEM教學網</title>
+<title>基本的資料型態 | STEM教學網</title>
   
 
 
@@ -115,7 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B4%E6%95%B8"><span class="nav-number">1.</span> <span class="nav-text">整數</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%81%8B%E7%AE%97%E5%AD%90"><span class="nav-number">2.</span> <span class="nav-text">運算子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%8A%A0%E6%B8%9B%E4%B9%98%E9%99%A4%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">+-*&#x2F;（加減乘除）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%96%E6%95%B4%E5%8F%96%E9%A4%98"><span class="nav-number">2.2.</span> <span class="nav-text">取整取餘</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B4%E6%95%B8%EF%BC%88Integer%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">整數（Integer）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%AE%E9%BB%9E%E6%95%B8%EF%BC%88float%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">浮點數（float）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%83%E6%9E%97%E5%AD%90%EF%BC%88boolean%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">布林子（boolean）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E4%B8%B2%EF%BC%88String%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">字串（String）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%89%E5%9E%8B%EF%BC%88Type-casting%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">轉型（Type casting）</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -128,7 +129,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/hexoproject/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -139,7 +140,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/hexoproject/tags/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -174,7 +175,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://akisfall.github.io/hexoproject/2024/04/04/integer/">
+    <link itemprop="mainEntityOfPage" href="https://akisfall.github.io/hexoproject/2024/04/04/DataTypes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/hexoproject/images/avatar.gif">
@@ -187,12 +188,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="整數與運算子 | STEM教學網">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="基本的資料型態 | STEM教學網">
+      <meta itemprop="description" content=" ">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          整數與運算子
+          基本的資料型態
         </h1>
 
         <div class="post-meta-container">
@@ -202,9 +203,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2024-04-04 11:49:39 / 修改時間：13:04:57" itemprop="dateCreated datePublished" datetime="2024-04-04T11:49:39+08:00">2024-04-04</time>
+      <time title="創建時間：2024-04-04 11:49:39" itemprop="dateCreated datePublished" datetime="2024-04-04T11:49:39+08:00">2024-04-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-04-05 14:34:19" itemprop="dateModified" datetime="2024-04-05T14:34:19+08:00">2024-04-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -219,23 +226,32 @@
   
 </div>
 
+            <div class="post-description"> </div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="整數"><a href="#整數" class="headerlink" title="整數"></a>整數</h1><p>整數就是在數學中，沒有小數點的數字。整數在程式設計裡面，整數的數字可以儲存從<strong>2147438647 ~ -2147483647</strong>，整數其實面對一些社會上沒那麼大型的專案來說，整數已經是屬於非常夠用的資料型態。想當然，如微軟、Google等大型企業來說這資料量幾乎可以說只能塞牙縫。</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="整數（Integer）"><a href="#整數（Integer）" class="headerlink" title="整數（Integer）"></a>整數（Integer）</h1><p>整數就是在數學中，沒有小數點的數字。整數在程式設計裡面，整數的數字可以儲存從<strong>2147438647 ~ -2147483647</strong>，整數其實面對一些社會上沒那麼大型的專案來說，整數已經是屬於非常夠用的資料型態。想當然，如微軟、Google等大型企業來說這資料量幾乎可以說只能塞牙縫。</p>
 <p>但Python跟大家就愛不一樣，Python的整數是幾乎沒有限制的，它不必理會2147438647的限制，主要的原因是它把另一個資料型態<code>long</code>合併起來並成為了看似沒有盡頭的<code>int</code>型態。（感謝這篇<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/46699469/why-integers-do-not-have-size-limit-in-python-3">SOF</a>的解釋）。</p>
-<h1 id="運算子"><a href="#運算子" class="headerlink" title="運算子"></a>運算子</h1><p>程式語言的世界中，運算子成了不可或缺的存在。<br>運算子在數學中叫做加減乘除，只不過在程式中，它把加減乘除擴展到了很多種運算子</p>
-<h2 id="（加減乘除）"><a href="#（加減乘除）" class="headerlink" title="+-*&#x2F;（加減乘除）"></a>+-*&#x2F;（加減乘除）</h2><p>加減乘除在程式設計跟數學的世界中一定是大家最常接觸的運算符號了。<br>基本上加減乘除沒甚麼太稀奇的部分，硬要說的話應該是除法會比較需要注意。<br>等等會提到，我們先來看看例子</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">10</span> <span class="comment">#假設x=10</span></span><br><span class="line"><span class="built_in">print</span>(x+<span class="number">2</span>) <span class="comment">#加 output 12</span></span><br><span class="line"><span class="built_in">print</span>(x-<span class="number">2</span>) <span class="comment">#減 output 8</span></span><br><span class="line"><span class="built_in">print</span>(x*<span class="number">2</span>) <span class="comment">#乘 output 20</span></span><br><span class="line"><span class="built_in">print</span>(x/<span class="number">2</span>) <span class="comment">#除 output 5.0 注意!!不是5</span></span><br></pre></td></tr></table></figure>
-<p>可以看到在第5行的時候，我們收到的是<strong>5.0</strong>而非是<strong>5</strong>。<br>這是因為除法可以除出小數點的關係，像是<code>25/4=6.25</code>。所以呢，我們就會把除法分成取整跟取餘。</p>
-<h2 id="取整取餘"><a href="#取整取餘" class="headerlink" title="取整取餘"></a>取整取餘</h2><p>取整取餘在程式世界中，取整是指我要除出來後拿整數的部分，無條件捨去掉小數點的部分，由上面的<code>25/4=6.25</code>為例，取整的話就會是<code>6</code>。<br>在Python中想要取整，只要輸入運算子<code>//</code>就能夠做到取整了喔！</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">10</span>//<span class="number">2</span>) <span class="comment">#回傳5</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(<span class="number">10</span>//<span class="number">2</span>)) <span class="comment">#&lt;class &#x27;int&#x27;&gt; 代表資料形態是int</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">10</span>/<span class="number">2</span>) <span class="comment">#回傳5.0</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(<span class="number">10</span>/<span class="number">2</span>)) <span class="comment">#&lt;class &#x27;float&#x27;&gt; 代表資料形態是float</span></span><br></pre></td></tr></table></figure>
+<h1 id="浮點數（float）"><a href="#浮點數（float）" class="headerlink" title="浮點數（float）"></a>浮點數（float）</h1><p>浮點數在Python中，代表著<strong>有小數的數字</strong>，想要表示小數點，勢必就需要使用到浮點數。浮點數基本上使用的性質就如同我們在數學學習的方法是一模一樣的，基本上沒有什麼太多的變化。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Pi = <span class="number">3.14</span> <span class="comment">#浮點數</span></span><br><span class="line"><span class="built_in">print</span>(Pi+<span class="number">1</span>) <span class="comment">#output: 4.14</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>題外話：在Python中，只要你的小數點位數過多，或者整數位數過多，電腦都會輸出<br><code>1.23456e+5</code>或者<code>1.23456789e-8</code>這樣的數字。<br>這些數字代表的都是科學符號，e後面是10的負次方或正次方。e則是指數的意思。</p>
+</blockquote>
+<h1 id="布林子（boolean）"><a href="#布林子（boolean）" class="headerlink" title="布林子（boolean）"></a>布林子（boolean）</h1><p>布林子並不是一種植物或者甚麼複雜的概念，他就只是個簡單的Yes或No。<br>在電腦的世界中，我們在表達任何一個事情時，都是由1或者0來表達的，對於電腦來說，沒有中間值，就只有Yes或者No的想法而已。<br>布林子的值真的是Yes或No嗎？當然不是，布林子的值只有True或False。<br>中文譯作，真或假。True（真）就是Yes，False（假）就是No</p>
+<h1 id="字串（String）"><a href="#字串（String）" class="headerlink" title="字串（String）"></a>字串（String）</h1><p>字串在Python中也扮演了很重要的角色，但是這裡只會介紹基礎的字串使用方法，並不會介紹進階的字串使用方法。字串基本上就是一個隨便使用者輸入的隨機字母或者語言，而且語言不會針對裡面的內容進行標記。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Chinese = <span class="string">&quot;嗨大家好&quot;</span></span><br><span class="line">English = <span class="string">&quot;Hello&quot;</span></span><br><span class="line">Japanese = <span class="string">&quot;こんにちは、みんな&quot;</span></span><br><span class="line">Korean = <span class="string">&quot;여러분, 안녕하세요&quot;</span> <span class="comment">#以上都可以print出來喔！</span></span><br></pre></td></tr></table></figure>
+<p>但是還是要注意，裡面有些字元像是<code>&#39;</code>、<code>&quot;</code>，等都會發生程式的錯誤。<br>那要怎麼辦？此時就會需要跳脫字元。跳脫字元就是在你可能會與語法相撞的字元前面加上一個反斜線<code>\</code> <strong>注意！！是反斜線<code>\</code>（Enter鍵上面的那顆按鈕）而不是<code>/</code>（shift旁邊的斜線）</strong><br>之後還會介紹更多關於字串的使用方式。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Amstrong once said &quot;</span>That<span class="string">&#x27;s one small step for man, one giant leap for mankind.&quot; &quot;) #output: SyntaxError</span></span><br><span class="line"><span class="string">print(&quot;Amstrong once said \&quot;That&#x27;</span>s one small step <span class="keyword">for</span> man, one giant leap <span class="keyword">for</span> mankind.\<span class="string">&quot; &quot;</span>) <span class="comment">#output:Amstrong once said &quot;That&#x27;s one small step for man, one giant leap for mankind.&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>取餘的概念也很簡單，就是取餘數。只要輸入運算子<code>%</code>就能夠取餘了喔！</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">25</span>%<span class="number">4</span>) <span class="comment">#output: 1 (25/4=6...1)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(<span class="number">25</span>%<span class="number">4</span>)) <span class="comment">#output: &lt;class &#x27;int&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="轉型（Type-casting）"><a href="#轉型（Type-casting）" class="headerlink" title="轉型（Type casting）"></a>轉型（Type casting）</h1><p>最後，我們來談談轉型。資料轉型是個很常見的事情，常常我們會遇到輸入的資料跟想要加起來的資料形態不同，那要怎麼辦？<br>此時，我們就會需要資料轉型。資料轉型能夠強制把不對的資料轉型到正確的資料。<br>在Python中，資料轉型不需要太複雜的過程，只要簡單地把資料形態寫在括號前面即可。<br>如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="string">&quot;123&quot;</span> <span class="comment">#此資料形態是字串</span></span><br><span class="line"><span class="built_in">print</span>(x) <span class="comment">#output: 123</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(x)) <span class="comment">#output: &lt;class &#x27;str&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">int</span>(x)) <span class="comment">#output: 123</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(x)) <span class="comment">#output: &lt;class &#x27;int&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在上面程式片段中，<code>type()</code>就是專門來確認資料形態的喔！</p>
+</blockquote>
+
     </div>
 
     
@@ -248,6 +264,9 @@
               <a href="/hexoproject/tags/Tutorial/" rel="tag"># Tutorial</a>
               <a href="/hexoproject/tags/DataType/" rel="tag"># DataType</a>
               <a href="/hexoproject/tags/Integer/" rel="tag"># Integer</a>
+              <a href="/hexoproject/tags/float/" rel="tag"># float</a>
+              <a href="/hexoproject/tags/boolean/" rel="tag"># boolean</a>
+              <a href="/hexoproject/tags/String/" rel="tag"># String</a>
           </div>
 
         
@@ -259,6 +278,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/hexoproject/2024/04/05/operator/" rel="next" title="運算子">
+                  運算子 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>

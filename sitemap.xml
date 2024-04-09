@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://akisfall.github.io/hexoproject/404.html</loc>
+    
+    <lastmod>2024-04-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://akisfall.github.io/hexoproject/googlea3a449877a6ef252.html</loc>
     
     <lastmod>2024-04-09</lastmod>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/hexoproject/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/hexoproject/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/hexoproject/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/hexoproject/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/hexoproject/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"akisfall.github.io","root":"/hexoproject/","images":"/hexoproject/images","scheme":"Mist","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/hexoproject/js/config.js"></script>
+
+    <meta name="description" content="預備知識 基本的HTML，以及CSS Selector，不清楚CSS跟HTML的點我！ Python的基本語法 Python的環境安裝 知道pip install （不必要，但強烈建議） 虛擬環境建立 最後就是學習與創造的心！  第一步：找到財政部的發票兌獎網站首先，可以直接透過這裡進入統一發票的兌獎網站。找到序號為1或者2的標題，標題應該會是XXX（民國）年 0X~0X月的樣子，如圖點進去之後就">
+<meta property="og:type" content="article">
+<meta property="og:title" content="發票兌獎器">
+<meta property="og:url" content="https://akisfall.github.io/hexoproject/8c270baf">
+<meta property="og:site_name" content="Python教學網">
+<meta property="og:description" content="預備知識 基本的HTML，以及CSS Selector，不清楚CSS跟HTML的點我！ Python的基本語法 Python的環境安裝 知道pip install （不必要，但強烈建議） 虛擬環境建立 最後就是學習與創造的心！  第一步：找到財政部的發票兌獎網站首先，可以直接透過這裡進入統一發票的兌獎網站。找到序號為1或者2的標題，標題應該會是XXX（民國）年 0X~0X月的樣子，如圖點進去之後就">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/8c270baf/Title.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/8c270baf/Selectedtags.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/8c270baf/prizeRelease.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/8c270baf/robotsTXT.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/8c270baf/Headers.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/8c270baf/UserAgent.jpg">
+<meta property="og:image" content="https://akisfall.github.io/hexoproject/8c270baf/11301result.jpg">
+<meta property="article:published_time" content="2024-05-15T01:44:41.000Z">
+<meta property="article:modified_time" content="2024-05-17T11:50:27.217Z">
+<meta property="article:author" content="第21組">
+<meta property="article:tag" content="發票兌獎">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://akisfall.github.io/hexoproject/8c270baf/Title.jpg">
+
+
+<link rel="canonical" href="https://akisfall.github.io/hexoproject/8c270baf.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://akisfall.github.io/hexoproject/8c270baf","path":"/8c270baf.html","title":"發票兌獎器"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>發票兌獎器 | Python教學網</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/hexoproject/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/hexoproject/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Python教學網</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-tags"><a href="/hexoproject/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/hexoproject/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li><li class="menu-item menu-item-sitemap"><a href="/hexoproject/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A0%90%E5%82%99%E7%9F%A5%E8%AD%98"><span class="nav-number">1.</span> <span class="nav-text">預備知識</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E6%89%BE%E5%88%B0%E8%B2%A1%E6%94%BF%E9%83%A8%E7%9A%84%E7%99%BC%E7%A5%A8%E5%85%8C%E7%8D%8E%E7%B6%B2%E7%AB%99"><span class="nav-number">2.</span> <span class="nav-text">第一步：找到財政部的發票兌獎網站</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%B0%8B%E6%89%BE%E6%A8%99%E7%B1%A4"><span class="nav-number">3.</span> <span class="nav-text">第二步：尋找標籤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%9C%E6%96%BCAPI"><span class="nav-number">3.1.</span> <span class="nav-text">關於API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B6%B2%E9%A0%81%E4%B8%89%E5%B7%A8%E9%A0%AD"><span class="nav-number">3.2.</span> <span class="nav-text">網頁三巨頭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B6%B2%E9%A0%81%E6%AA%A2%E6%B8%AC%E5%99%A8"><span class="nav-number">3.3.</span> <span class="nav-text">網頁檢測器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%BB%BA%E7%BD%AE%E7%92%B0%E5%A2%83"><span class="nav-number">4.</span> <span class="nav-text">第三步：建置環境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E9%96%8B%E5%A7%8B%E5%AF%AB%E7%A8%8B%E5%BC%8F%E3%80%82"><span class="nav-number">5.</span> <span class="nav-text">第四步：開始寫程式。</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#URL%E6%98%AF%E7%94%9A%E9%BA%BC%EF%BC%9F"><span class="nav-number">5.1.</span> <span class="nav-text">URL是甚麼？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B2%A1%E6%94%BF%E9%83%A8%E7%9A%84URL"><span class="nav-number">5.2.</span> <span class="nav-text">財政部的URL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%88%E6%A1%88%E8%B5%B7%E9%A0%AD"><span class="nav-number">5.3.</span> <span class="nav-text">專案起頭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#year"><span class="nav-number">5.4.</span> <span class="nav-text">year</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#month%E8%B7%9Fday"><span class="nav-number">5.5.</span> <span class="nav-text">month跟day</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%AC%E4%B8%8BURL"><span class="nav-number">5.6.</span> <span class="nav-text">爬下URL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#robots-txt"><span class="nav-number">5.6.1.</span> <span class="nav-text">robots.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%AC%E8%9F%B2%E7%A6%AE%E5%84%80"><span class="nav-number">5.6.2.</span> <span class="nav-text">爬蟲禮儀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#requests"><span class="nav-number">5.6.3.</span> <span class="nav-text">requests</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#headers"><span class="nav-number">5.6.4.</span> <span class="nav-text">headers</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E6%B4%97requests%E7%9A%84%E5%85%A7%E5%AE%B9"><span class="nav-number">5.7.</span> <span class="nav-text">清洗requests的內容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BS4"><span class="nav-number">5.7.1.</span> <span class="nav-text">BS4</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%8C%E4%BD%BF%E7%94%A8%E8%80%85%E8%BC%B8%E5%85%A5"><span class="nav-number">6.</span> <span class="nav-text">第五步，使用者輸入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B8%AC%E8%A9%A6"><span class="nav-number">7.</span> <span class="nav-text">測試</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#11301"><span class="nav-number">7.1.</span> <span class="nav-text">11301</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">8.</span> <span class="nav-text">總結</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A4%E5%B0%88%E6%A1%88%E5%8F%AF%E4%BB%A5%E5%86%8D%E5%A4%9A%E7%99%BC%E5%B1%95%E7%9A%84%E6%96%B9%E5%90%91%E3%80%82"><span class="nav-number">9.</span> <span class="nav-text">此專案可以再多發展的方向。</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">第21組</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/hexoproject/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/hexoproject/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/hexoproject/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/akisfall" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;akisfall" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:a7852659858@gmail.com" title="E-Mail → mailto:a7852659858@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://akisfall.github.io/hexoproject/8c270baf">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/hexoproject/images/avatar.gif">
+      <meta itemprop="name" content="第21組">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python教學網">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="發票兌獎器 | Python教學網">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          發票兌獎器
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-05-15 09:44:41" itemprop="dateCreated datePublished" datetime="2024-05-15T09:44:41+08:00">2024-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-05-17 19:50:27" itemprop="dateModified" datetime="2024-05-17T19:50:27+08:00">2024-05-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/hexoproject/categories/%E7%A8%8B%E5%BC%8F%E8%A3%BD%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">程式製作</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="預備知識"><a href="#預備知識" class="headerlink" title="預備知識"></a>預備知識</h1><ul>
+<li>基本的HTML，以及CSS Selector，<a target="_blank" rel="noopener" href="https://www.w3schools.com/html/default.asp">不清楚CSS跟HTML的點我！</a></li>
+<li>Python的基本語法</li>
+<li>Python的環境安裝</li>
+<li>知道pip install</li>
+<li>（不必要，但強烈建議） 虛擬環境建立</li>
+<li>最後就是學習與創造的心！</li>
+</ul>
+<h1 id="第一步：找到財政部的發票兌獎網站"><a href="#第一步：找到財政部的發票兌獎網站" class="headerlink" title="第一步：找到財政部的發票兌獎網站"></a>第一步：找到財政部的發票兌獎網站</h1><p>首先，可以直接透過<a target="_blank" rel="noopener" href="https://www.etax.nat.gov.tw/etw-main/ETW183W1/">這裡</a>進入統一發票的兌獎網站。<br>找到序號為<strong>1或者2</strong>的標題，標題應該會是<strong>XXX（民國）年 0X~0X月</strong>的樣子，如圖<br><img src="/hexoproject/8c270baf/Title.jpg"><br>點進去之後就會看到特別獎特獎與頭獎的號碼了！</p>
+<h1 id="第二步：尋找標籤"><a href="#第二步：尋找標籤" class="headerlink" title="第二步：尋找標籤"></a>第二步：尋找標籤</h1><p>網頁的基底主要是由HTML、CSS以及JavaScript甚至於PHP來組成的。<br>在這裡，我們不需要複雜的前端後端框架的知識，在這裡最好的情況是有API，可惜財政部並沒有針對發票兌獎製作API。</p>
+<h2 id="關於API"><a href="#關於API" class="headerlink" title="關於API"></a>關於API</h2><p>API是指Application programming interface。中譯<strong>應用程式介面</strong><br>API主要是讓前端與後端能夠溝通的一種技術，它的工作是將一個使用者想要的資料，又稱之為<br><strong>Request</strong>（直翻為要求）傳輸給後端的系統，可能是<strong>代理伺服器或者主伺服器</strong>。<br>Request傳輸出去後，系統（伺服器）收到後會去分析後了解使用者想要的資料，接著回傳一個對應的<strong>Response</strong>（回應），然後再藉由JavaScript用fetch API解開後，處理資料在顯示給使用者。</p>
+<h2 id="網頁三巨頭"><a href="#網頁三巨頭" class="headerlink" title="網頁三巨頭"></a>網頁三巨頭</h2><p>網頁三巨頭是指過去組成網頁架構的HTML以及CSS，以及現代較常使用的JavaScript組成。<br>HTML是由一個又一個的標籤(tags)組成，像是&lt;div&gt;Hello world&lt;div&#x2F;&gt;，它組成了網頁的架構，也是最基層的存在。<strong>比喻來講，就是建築的鋼筋與水泥。</strong><br>CSS是由選擇器(selector)與大括號內的語法組成的樣式設定表。它能夠設定從簡單的顏色字體大小，到直接決定整個網頁的排版與動畫，是前端語言重要的存在。<strong>比喻說，它就是建築的設計與材質等</strong>。<br>JavaScript是一個腳本語言，掌管著包含計算、後端的資料處理，本專案用不到，不細緻解釋。<br>如果有興趣可以到 <a target="_blank" rel="noopener" href="https://javascript.info/">Javascript info</a> 來了解。</p>
+<h2 id="網頁檢測器"><a href="#網頁檢測器" class="headerlink" title="網頁檢測器"></a>網頁檢測器</h2><p>按下<code>F12</code>或者<code>右鍵-&gt;檢測</code>，就能開啟網頁檢測器。<br>網頁檢測器可以讓我們看網頁原始碼，有很多彩色文字以及英文的部分就是HTML。<br>只要按下左上角有一個<strong>滑鼠鼠標+正方形</strong>的圖示，然後將自己的滑鼠移動到中獎號碼上面，就可以找到中獎號碼的所在位置了。<br><img src="/hexoproject/8c270baf/Selectedtags.jpg" alt="選中的標籤"><br>以上，這一步就完成了，但先不要關閉掉網頁喔！</p>
+<h1 id="第三步：建置環境"><a href="#第三步：建置環境" class="headerlink" title="第三步：建置環境"></a>第三步：建置環境</h1><p>（以下用Windows作為示例，Linux以及Mac請<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10199980">參照</a>）<br>首先，可以建立一個資料夾，為這個專案取個名子吧！<br>然後建置一個虛擬環境給這個專案，如果不清楚的話可以<a href="52385.html">參照</a><br>打開cmd，在你建立的資料夾底下輸入<code>python -m venv (專案名稱)</code><br>例如：D:&#x2F;crawlerReceipt。然後使用&#96;(專案名稱)\Scripts\activate.bat打開虛擬環境。<br>我們需要的套件如下：</p>
+<ul>
+<li>beautifulsoup4</li>
+<li>requests</li>
+<li>(自選) fastapi</li>
+</ul>
+<p>最後就輸入<code>python -m pip install beautifulsoup4</code>以及<code>python -m pip install requests</code>即可。</p>
+<h1 id="第四步：開始寫程式。"><a href="#第四步：開始寫程式。" class="headerlink" title="第四步：開始寫程式。"></a>第四步：開始寫程式。</h1><p>首先，我們可以回頭觀察財政部的發票兌獎網站，我們可以在URL發現一些有用的訊息。</p>
+<h2 id="URL是甚麼？"><a href="#URL是甚麼？" class="headerlink" title="URL是甚麼？"></a>URL是甚麼？</h2><p>URL就是指網址，由三個部分組成，分別為協定、網域以及路徑組成。<br>用本網站來舉例 <a href="https://akisfall.github.io/hexoproject">https://akisfall.github.io/hexoproject</a><br><em>https</em>指的就是<strong>協定</strong>，<em>akisfall.github.io</em>的部分就是<strong>網域</strong>，<em>hexoproject</em>是<strong>文件路徑</strong><br><strong>協定</strong>，就像是網路上統一的溝通格式，可以讓Windows、Linux、Mac跨平台顯示。<br><strong>網域</strong>，類似於別稱，如果今天我要連facebook結果我要打<em>31.13.87.36</em> 我相信，誰都不想要登了對吧？但我改成facebook.com，好記又好用。因此網域伺服器（DNS）便由此得生。<br><strong>路徑</strong>，就是在那個網域下面的檔案，hexoproject就是指這個。</p>
+<h2 id="財政部的URL"><a href="#財政部的URL" class="headerlink" title="財政部的URL"></a>財政部的URL</h2><p>直接觀察財政部的發票兌獎網站我們可以發現。<br><a target="_blank" rel="noopener" href="https://www.etax.nat.gov.tw/etw-main/ETW183W2_11301/">https://www.etax.nat.gov.tw/etw-main/ETW183W2_11301/</a><br>在ETW183W2_，後面有個可以被辨別的文字，也就是民國年加上月份(11301)。<br>那我們要怎麼確保ETW183W2_都不會變動呢？如果你把11301改成11211或者多試幾個，還能夠找到網頁，就代表財政部是循著這個規則發布發票兌獎的。<br>通常網站的URL在設計的時候，都會有幾個參數能夠讓人類辨識，即便在多亂碼也是如此。</p>
+<h2 id="專案起頭"><a href="#專案起頭" class="headerlink" title="專案起頭"></a>專案起頭</h2><p>在專案資料夾內，建立一個python檔，名稱可以自己取，以下用receipt為例。<br>如果你打開Vscode的話，它會自動偵測虛擬環境，就按藍色的按鍵給他設定就好了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests <span class="keyword">as</span> re <span class="comment">#匯入先前安裝的 requests，並代稱為re</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="comment">#匯入先前安裝的 BeautifulSoup</span></span><br><span class="line"><span class="keyword">import</span> datetime <span class="comment">#內建的python套件</span></span><br><span class="line"></span><br><span class="line">Today = date.datetime.today() <span class="comment">#使用datetime判斷今天日期</span></span><br><span class="line">year = <span class="built_in">str</span>(<span class="built_in">int</span>(Today.strftime(<span class="string">&quot;%Y&quot;</span>))-<span class="number">1911</span>) </span><br><span class="line">month = Today.strftime(<span class="string">&quot;%m&quot;</span>) <span class="comment">#抓現在幾月</span></span><br><span class="line"><span class="keyword">if</span> month == <span class="string">&quot;01&quot;</span> <span class="keyword">or</span> month == <span class="string">&quot;02&quot;</span> <span class="keyword">or</span> (month == <span class="string">&quot;03&quot;</span> <span class="keyword">and</span> <span class="built_in">int</span>(day) &lt; <span class="number">25</span>):</span><br><span class="line">    year = <span class="built_in">str</span>(<span class="built_in">int</span>(year)-<span class="number">1</span>)</span><br><span class="line">    month = <span class="string">&quot;11&quot;</span></span><br><span class="line"><span class="keyword">elif</span> <span class="built_in">int</span>(month) % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">    month = <span class="string">&quot;0&quot;</span> + <span class="built_in">str</span>(<span class="built_in">int</span>(month) - <span class="number">3</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="built_in">int</span>(month) % <span class="number">2</span> != <span class="number">0</span> <span class="keyword">and</span> <span class="built_in">int</span>(day) &gt; <span class="number">25</span>:</span><br><span class="line">    month = <span class="string">&quot;0&quot;</span> + <span class="built_in">str</span>(<span class="built_in">int</span>(month) -<span class="number">2</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    month = <span class="string">&quot;0&quot;</span> + <span class="built_in">str</span>(<span class="built_in">int</span>(month)-<span class="number">4</span>)</span><br><span class="line">day = Today.strftime(<span class="string">&quot;%d&quot;</span>) <span class="comment">#抓現在幾號</span></span><br><span class="line">url = <span class="string">&quot;https://www.etax.nat.gov.tw/etw-main/ETW183W2_&quot;</span>+year+month</span><br></pre></td></tr></table></figure>
+<p>以上，我們先宣告了四個變數，利用Python內建的datetime，我們可以製造出0X月的格式，就能跟財政部的0X月格式一模一樣。</p>
+<h2 id="year"><a href="#year" class="headerlink" title="year"></a>year</h2><p>year需要轉型再轉型的原因是，<code>datetime.strftime(&quot;%Y&quot;)</code>回傳的year是字串，因為要計算民國年，而回傳的是西元年，所以要優先轉型int扣掉1911後，在轉型回字串並加入在url中。</p>
+<h2 id="month跟day"><a href="#month跟day" class="headerlink" title="month跟day"></a>month跟day</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#節錄自上面的程式碼</span></span><br><span class="line"><span class="keyword">if</span> month == <span class="string">&quot;01&quot;</span> <span class="keyword">or</span> month == <span class="string">&quot;02&quot;</span> <span class="keyword">or</span> (month == <span class="string">&quot;03&quot;</span> <span class="keyword">and</span> <span class="built_in">int</span>(day) &lt; <span class="number">25</span>): </span><br><span class="line">    <span class="comment">#一月二月因為是年初，開的是去年的奬，且三月25前沒開獎。</span></span><br><span class="line">    year = <span class="built_in">str</span>(<span class="built_in">int</span>(year)-<span class="number">1</span>)</span><br><span class="line">    month = <span class="string">&quot;11&quot;</span></span><br><span class="line"><span class="keyword">elif</span> <span class="built_in">int</span>(month) % <span class="number">2</span> == <span class="number">0</span>: </span><br><span class="line">    <span class="comment">#如果剛好是偶數的話，已經不是開獎月，不必判斷幾月幾號</span></span><br><span class="line">    month = <span class="string">&quot;0&quot;</span> + <span class="built_in">str</span>(<span class="built_in">int</span>(month) - <span class="number">3</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="built_in">int</span>(month) % <span class="number">2</span> != <span class="number">0</span> <span class="keyword">and</span> <span class="built_in">int</span>(day) &gt; <span class="number">25</span>: </span><br><span class="line">    <span class="comment">#如果是奇數月的話，會遇到開獎日，而25號以後就能知道開獎結果。</span></span><br><span class="line">    month = <span class="string">&quot;0&quot;</span> + <span class="built_in">str</span>(<span class="built_in">int</span>(month)-<span class="number">2</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    month = <span class="string">&quot;0&quot;</span> + <span class="built_in">str</span>(<span class="built_in">int</span>(month)-<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p>先把12個月的所有開獎月跟開那些月份寫出來。<br><img src="/hexoproject/8c270baf/prizeRelease.jpg" alt="開獎月份"><br>在發票的開獎月中，我們可以知道幾件事情</p>
+<ul>
+<li>開獎月開的月份是前2個月，例如：3月開的是1月2月，5月開的是3月4月，所以在第二個elif的結果會是<strong>月份減2</strong>。</li>
+<li>開獎月25號前，只能去<strong>抓4個月前</strong>的開獎號碼，為甚麼呢？因為開獎開的是前兩個月的發票，最新的資料只有4個月前的資料，所以才會<strong>減4</strong>。</li>
+<li>三月25日以前，因為沒有開獎的原因，所以跟著1月2月爬去年11月、12月的資料。</li>
+<li>偶數月不開獎，所以四月爬一月，六月爬三月，八月爬五月、十月爬七月、十二月爬九月的資料。</li>
+<li>年初1月開的是去年11、12月的獎。</li>
+</ul>
+<h2 id="爬下URL"><a href="#爬下URL" class="headerlink" title="爬下URL"></a>爬下URL</h2><p>簡單的靜態爬蟲是透過程式設計來模擬人類在網路上的操作，將想要的資料透過程式擷取（又稱為資料清洗），但爬蟲有不少的限制，因為爬得好可以幫助世人，爬不好就是刑事責任。</p>
+<h3 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt"></a>robots.txt</h3><p>robots.txt就是在告訴你，我這個網站什麼能爬，什麼不能爬。<br>所以撰寫爬蟲時，請注意這個重要的文件喔！<strong>如果沒有，也要注意別爬到重要資料！！！</strong><br>如果要查看robots.txt可以在網域後面直接輸入robots.txt<br>以Youtube為例，財政部網站沒有<br><img src="/hexoproject/8c270baf/robotsTXT.jpg" alt="robots.txt"><br><strong>User-agent:*</strong> 指的就是你的瀏覽器，通常會是瀏覽器的版本或者簡單的電腦資訊等<br><strong>Disallow:…</strong> 就是指你不能看到什麼，或者爬蟲不能看到甚麼文件裡面的內容。</p>
+<h3 id="爬蟲禮儀"><a href="#爬蟲禮儀" class="headerlink" title="爬蟲禮儀"></a>爬蟲禮儀</h3><p>因為爬蟲主要還是透過連線的方式，所以<span style="color:red; display:inline;">千萬千萬不要寫一個無窮迴圈</span>，一直送Requests給對象主機，這是非常惡劣的行為，也是違法的網路攻擊行為。<br>雖然在那之前，你會被對方的主機封鎖IP最後判別為DOS攻擊。<br>無論如何，爬蟲是可能根據你的行為犯法的，請不要造成對方的困擾！，也讓自己遠離刑事責任！<br>了解完禮儀後，我們就開始爬下資料吧！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#繼上面的程式碼片段</span></span><br><span class="line">url = <span class="string">&quot;https://www.etax.nat.gov.tw/etw-main/ETW183W2_&quot;</span>+year+month</span><br><span class="line">headers = &#123;<span class="string">&quot;User-Agent&quot;</span>:<span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0&quot;</span>&#125;</span><br><span class="line">response = re.get(url,headers=headers)</span><br><span class="line">response.encoding = <span class="string">&quot;utf-8&quot;</span></span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+<p>以上的程式碼如果執行過後，應該會輸出很多令人眼花撩亂的文字，沒關係，因為之後這些文字會被清洗成能夠讓人閱讀的文字。</p>
+<h3 id="requests"><a href="#requests" class="headerlink" title="requests"></a>requests</h3><p>requests套件是一個提供Python能夠進行網頁四大動作的套件<br>如GET、POST、PUT以及DELETE。<br>GET是從網頁下面抓取內容的動作、POST則是將資料傳輸給伺服器的動作、PUT則是修改資料的動作、DELETE是刪除的動作。本次會使用到GET，也就是抓取內容的動作，剩下的有興趣可以 <a target="_blank" rel="noopener" href="https://juejin.cn/post/7239586416883122235">到此</a> 了解。<br>利用<code>re.get()</code> <code>re.post()</code> <code>re.put()</code> <code>re.delete()</code> 便可以做出相對應的動作。</p>
+<h3 id="headers"><a href="#headers" class="headerlink" title="headers"></a>headers</h3><p>第二行的headers是甚麼？它的名子就是檔頭，檔頭包含了很多訊息，諸如cookie、使用的Browser（瀏覽器）等等<br>你可以按<code>F12-&gt;網路-&gt;按F5重整頁面-&gt;隨機點任何一行檔案-&gt;擋頭</code> 如圖所示。<br><img src="/hexoproject/8c270baf/Headers.jpg" alt="檔頭"><br>而這裡的headers其實不是指這個檔頭而是檔頭最後面的<strong>User-agent</strong><br><img src="/hexoproject/8c270baf/UserAgent.jpg" alt="User-agent"><br>用這個User-agent的名義下去爬資料，才比較不會發生爬不到的事情。<br>所以執行<code>re.get(url,headers=headers)</code>就能夠爬下來了喔！</p>
+<h2 id="清洗requests的內容"><a href="#清洗requests的內容" class="headerlink" title="清洗requests的內容"></a>清洗requests的內容</h2><p>成功把財政部的網頁內容爬下來之後，我們就來進行資料清洗吧！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#繼上面的程式碼</span></span><br><span class="line">root = BeautifulSoup(response.text,<span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">td = root.select(<span class="string">&quot;#tenMillionsTable tbody tr td div div.col-12.mb-3&quot;</span>)</span><br><span class="line">prizeli = [prize.text.strip() <span class="keyword">for</span> prize <span class="keyword">in</span> td]</span><br><span class="line">prizetable = &#123;</span><br><span class="line">    <span class="string">&quot;SuperSpecialPrize&quot;</span>:prizeli[<span class="number">0</span>],</span><br><span class="line">    <span class="string">&quot;SpecialPrize&quot;</span>:prizeli[<span class="number">1</span>],</span><br><span class="line">    <span class="string">&quot;Jackpot1&quot;</span>:prizeli[<span class="number">2</span>],</span><br><span class="line">    <span class="string">&quot;Jackpot2&quot;</span>:prizeli[<span class="number">3</span>],</span><br><span class="line">    <span class="string">&quot;Jackpot3&quot;</span>:prizeli[<span class="number">4</span>],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="BS4"><a href="#BS4" class="headerlink" title="BS4"></a>BS4</h3><p>BS4是「美麗的湯」的縮寫，全名為BeautifulSoup。<br>BS4是很常見的資料清洗工具，主要是解析HTML，使用Parser，也就是第一行root後面的參數<code>&#39;lxml&#39;</code>，然後可以讓設計者快速擷取有興趣的文字。<br><span style="color:red;">這裡有個重點，lxml要安裝的！</span><br>要使用<code>python -m pip install lxml來安裝喔！ 使用的select()就是透過CSS selector下去選取的內容後，會選出一個 </code>bs4.element.tags&#96;的資料型態。如果對於BS4有更深入的興趣可以到<a target="_blank" rel="noopener" href="https://blog.gtwang.org/programming/python-beautiful-soup-module-scrape-web-pages-tutorial/">這裡</a>做更深入的了解喔！<br><strong>爬下來的資料要使用for迴圈的方式來顯示！</strong> 不然會看不到喔！</p>
+<p>接著再把爬下來的資料放到字典裏面，由上到下的英文分別是。</p>
+<ul>
+<li>特別獎</li>
+<li>特獎</li>
+<li>頭獎*3<br>至此，爬蟲的部分就結束了，剩下的指令由Python基礎就可以解決了。</li>
+</ul>
+<h1 id="第五步，使用者輸入"><a href="#第五步，使用者輸入" class="headerlink" title="第五步，使用者輸入"></a>第五步，使用者輸入</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">lastThrNums = <span class="built_in">input</span>(<span class="string">&quot;請輸入發票後三碼：&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(lastThrNums) != <span class="number">3</span>:</span><br><span class="line">    <span class="keyword">raise</span> ValueError(<span class="string">&quot;輸入的號碼長度有誤&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> lastThrNums == prizetable.get(<span class="string">&quot;Jackpot1&quot;</span>)[<span class="number">5</span>:<span class="number">8</span>]:</span><br><span class="line">    frontfiveNums = <span class="built_in">input</span>(<span class="string">&quot;恭喜你中獎了，請繼續輸入前五碼：&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(frontfiveNums) == <span class="number">5</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">&quot;輸入的號碼長度有誤&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> frontfiveNums[<span class="number">0</span>:<span class="number">5</span>] == prizetable.get(<span class="string">&quot;Jackpot1&quot;</span>)[<span class="number">0</span>:<span class="number">5</span>]: <span class="comment">#前五碼配對</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;恭喜你中了頭獎！&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> frontfiveNums[<span class="number">1</span>:<span class="number">5</span>] == prizetable.get(<span class="string">&quot;Jackpot1&quot;</span>)[<span class="number">1</span>:<span class="number">5</span>]: <span class="comment">#前四碼配對</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;恭喜你中了二獎！&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> frontfiveNums[<span class="number">2</span>:<span class="number">5</span>] == prizetable.get(<span class="string">&quot;Jackpot1&quot;</span>)[<span class="number">2</span>:<span class="number">5</span>]: <span class="comment">#前三碼配對</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;恭喜你中了三獎！&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> frontfiveNums[<span class="number">3</span>:<span class="number">5</span>] == prizetable.get(<span class="string">&quot;Jackpot1&quot;</span>)[<span class="number">3</span>:<span class="number">5</span>]: <span class="comment">#前兩碼配對</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;恭喜你中了四獎！&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> frontfiveNums[<span class="number">4</span>:<span class="number">5</span>] == prizetable.get(<span class="string">&quot;Jackpot1&quot;</span>)[<span class="number">4</span>:<span class="number">5</span>]: <span class="comment">#前一碼配對</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;恭喜你中了五獎！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> lastThrNums == prizetable.get(<span class="string">&quot;SuperSpecialPrize&quot;</span>)[<span class="number">5</span>:<span class="number">8</span>]:</span><br><span class="line">    frontfiveNums = <span class="built_in">input</span>(<span class="string">&quot;恭喜你可能中了特別獎，請輸入前五碼：&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> frontfiveNums[<span class="number">0</span>:<span class="number">5</span>] == prizetable.get(<span class="string">&quot;SuperSpecialPrize&quot;</span>)[<span class="number">0</span>:<span class="number">5</span>]:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;你中了特別獎！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> lastThrNums == prizetable.get(<span class="string">&quot;SpecialPrize&quot;</span>)[<span class="number">5</span>:<span class="number">8</span>]:</span><br><span class="line">    frontfiveNums = <span class="built_in">input</span>(<span class="string">&quot;恭喜你可能中了特獎，請輸入前五碼：&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> frontfiveNums[<span class="number">0</span>:<span class="number">5</span>] == prizetable.get(<span class="string">&quot;SpecialPrize&quot;</span>)[<span class="number">0</span>:<span class="number">5</span>]:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;你中了特獎！&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>最後，我們請使用者輸入發票後三碼，如果輸入字串長度過長的時候，升起一個ValueError跳出程式。<br>先將後三碼比對（利用字串切片），如果有配對到後三碼，在配對後續的5碼的邏輯下去做。<br>至此，發票兌獎器全數完成！</p>
+<h1 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h1><h2 id="11301"><a href="#11301" class="headerlink" title="11301"></a>11301</h2><p><img src="/hexoproject/8c270baf/11301result.jpg" alt="result"></p>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><p>這次我們製作了發票兌獎器，有時候直接實作Python的程式語言與套件庫，可以發現到Python的程式格外簡單，相同的程式可能在其他語言實做不到，或者可以但須要千百行以上的程式才有可能達到。<br>做專案最好玩的點在於你可以看著自己一手打造出一個兌獎器、密碼產生器。<br>即使其他人做過了，但當你從零開始，想像這個軟體怎麼運作，邏輯怎麼走怎麼做，慢慢摸索慢慢了解就會發現，做專案不是為了創造下個GPT，只是為了學習，只是為了單純的快樂。</p>
+<h1 id="此專案可以再多發展的方向。"><a href="#此專案可以再多發展的方向。" class="headerlink" title="此專案可以再多發展的方向。"></a>此專案可以再多發展的方向。</h1><p>在這個專案中，我們把基本的資料爬下來，再透過Python的字串切片、列表產生式來處理裡面很多的資料。然而，這專案還有很多美中不足的地方，而這裡就提出來，讓讀者們自行解決。</p>
+<ul>
+<li>一定要過了25號後才能夠爬到資料嗎？難道我們不可以直接當天爬到資料嗎？<ul>
+<li>使用datetime的strftime()可以抓到小時跟分鐘，以及weekday()可以知道今天星期幾</li>
+<li>根據<a target="_blank" rel="noopener" href="https://bluezz.com.tw/invoice_date.php">開獎時間</a>，或者觀察每次開獎後多久可以看到網頁的時間，來爬取資料。</li>
+</ul>
+</li>
+<li>輸入有點麻煩，每次輸入一張發票就要啟動一次程式，無窮迴圈好像可以一直讓它開著？</li>
+<li>輸出很陽春，幾個黑白相間的文字，是不是有其他的輸出方法？<ul>
+<li>有幾個套件叫做PySide,PyQt,Tkinter 都是製作圖形化介面（GUI），除了美化輸出外，還可以解決上面的問題喔！</li>
+<li>有一個套件叫做FastAPI，可以自己設計一個API，將輸出結果傳輸到自己寫的網頁上，做判斷</li>
+<li>還有很多很多不同的輸出方式！</li>
+</ul>
+</li>
+<li>爬蟲除了可以爬發票以外，還可以爬股票資料、天氣資料等，以及可以試著連接API來建立屬於自己的資料系統喔！</li>
+<li>最後，這個專案一定還有很多很多需要改正的地方，包含Bugs之類的，多請他人測試或許能夠測出很多Bug喔！</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/hexoproject/tags/%E7%99%BC%E7%A5%A8%E5%85%8C%E7%8D%8E/" rel="tag"># 發票兌獎</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/hexoproject/13984" rel="prev" title="環境測試">
+                  <i class="fa fa-angle-left"></i> 環境測試
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">第21組</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/hexoproject/js/comments.js"></script><script src="/hexoproject/js/utils.js"></script><script src="/hexoproject/js/motion.js"></script><script src="/hexoproject/js/schemes/muse.js"></script><script src="/hexoproject/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

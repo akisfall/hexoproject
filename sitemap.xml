@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://akisfall.github.io/hexoproject/2794</loc>
+    
+    <lastmod>2024-06-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://akisfall.github.io/hexoproject/8c270baf</loc>
     
     <lastmod>2024-05-31</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/13984</loc>
-    
-    <lastmod>2024-04-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://akisfall.github.io/hexoproject/2794</loc>
     
     <lastmod>2024-04-10</lastmod>
     
@@ -85,7 +85,7 @@
 
   <url>
     <loc>https://akisfall.github.io/hexoproject</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -93,63 +93,63 @@
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/tags/Setup/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/tags/Python/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/tags/CodeEditor/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/tags/Tutorial/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/tags/%E7%BD%AE%E9%A0%82/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/tags/%E4%BB%8B%E7%B4%B9/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/tags/VirtualEnv/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/tags/%E7%99%BC%E7%A5%A8%E5%85%8C%E7%8D%8E/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/tags/Test/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -158,21 +158,21 @@
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/categories/%E5%BB%BA%E7%BD%AE/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/categories/%E4%BB%8B%E7%B4%B9/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://akisfall.github.io/hexoproject/categories/%E7%A8%8B%E5%BC%8F%E8%A3%BD%E4%BD%9C/</loc>
-    <lastmod>2024-05-31</lastmod>
+    <lastmod>2024-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
